@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 
 * {
     margin: 0;
@@ -6,22 +6,171 @@
     box-sizing: border-box;
 }
 
+.header-inner, #main-image,.index-container  {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
 body {
-    background-color:red;!important;
+    background-color: #f4f9ff;
     font-family: Arial, sans-serif;
     color: #333;
     font-size: 14px;
 }
 
-img {
+header {
+    margin-top: 60px;
+    padding-bottom: 10px;
+    width: auto;
+}
+
+.photo-book img {
+    width: 160px;
+    display: block;
+}
+
+#main-image {
+    width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+#main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* インデックス */
+
+#index {
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.index-container {
+    background-color: #fff;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.index-container-wrapper {
+    max-width: 500px;
+    margin-left: 20%;
+    text-align: left;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+.index-list {
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.index-list li {
+    padding: 10px;
+}
+
+
+
+/*ディテール*/
+
+.detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.detail-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.detail-content img{
+    width: 300px;
+    height: auto;
+}
+
+.detail-content text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.detail-container-wrapper {
+    max-width: 800px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.detail-content .title{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.detail-content dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.detail-content dt {
+    width: 30%;
+}
+
+.detail-content dd {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.link {
+    display: inline-block;
+    color:#333;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#footer {
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 420px;
+}
+
+
+/*スマホ*/
+@media screen and (max-width: 1024px) {
+    .detail-container-wrapper,#footer {
+    margin-left: 0 !important;
+    padding: 0 20px;
+    max-width: 100%;
+    text-align: left;
+}
+
+.detail-content {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail-content img , .detail-content text {
+    width: 100%;
     max-width: 100%;
 }
 
-header {
-    padding: 30px 4%;
-}
-
-.photo-book img{
-    
-    height: auto;
+.detail-content dl{
+    width: 100%;
 }
