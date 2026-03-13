@@ -25,6 +25,8 @@ header {
     width: auto;
 }
 
+/*メイン*/
+
 .photo-book img {
     width: 160px;
     display: block;
@@ -154,23 +156,67 @@ header {
 
 /*スマホ*/
 @media screen and (max-width: 1024px) {
-    .detail-container-wrapper,#footer {
-    margin-left: 0 !important;
-    padding: 0 20px;
+    .header-inner,#main-image,.detail-container,#footer {
     max-width: 100%;
-    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+
+header {
+    margin-top: 40px;
+    padding-bottom: 0;
+}
+
+#main-image {
+    margin: 10px auto;
+}
+
+.index-container-wrapper {
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .detail-content {
     flex-direction: column;
-    gap: 30px;
 }
 
-.detail-content img , .detail-content text {
+
+.detail-content img {
     width: 100%;
     max-width: 100%;
 }
 
-.detail-content dl{
+.detail-container-wrapper {
     width: 100%;
+    margin-left: 0;
+    padding: 0 10px;
+}
+
+.detail-content dl{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.detail-content dt {
+    width: 30%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.detail-content dd {
+    width: 70%;
+    margin-left: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/*フッター*/
+
+#footer {
+    margin-left: 0;
+}
 }
